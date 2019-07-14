@@ -3,6 +3,16 @@ import {StyleSheet,View,Text,Button} from 'react-native';
 import {styles} from './styles';
 
 class SettingsScreen extends Component {
+	static navigationOptions = {
+		title: 'Settings',
+		headerStyle: {backgroundColor: '#f2faf2'},
+		headerTintColor:'blue',
+		headerTitleStyle:{
+			fontWeight:'bold',
+			color:'blue'
+		}
+	};
+	
 	state = {
 		p1: 'setting 1',
 		p2: 'setting 2'

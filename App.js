@@ -12,7 +12,15 @@ const HomeStack = createStackNavigator({
 		Users: UserScreen
 	},
 	{
-		initialRouteName: 'Home'
+		initialRouteName: 'Home',
+		defaultNavigationOptions: {
+			headerStyle: {backgroundColor: '#f2faf2'},
+			headerTintColor:'blue',
+			headerTitleStyle:{
+				fontWeight:'bold',
+				color:'green'
+			}
+		}
 	});
 const OtherStack = createStackNavigator({
 	Settings: SettingsScreen,

@@ -5,11 +5,11 @@ import {styles} from './styles';
 class UserScreen extends Component {
 	static navigationOptions = {
 		title: 'Users',
-		headerStyle: {backgroundColor: 'f4511e'},
+		headerStyle: {backgroundColor: '#f2faf2'},
 		headerTintColor:'blue',
 		headerTitleStyle:{
 			fontWeight:'bold',
-			color:'green'
+			color:'red'
 		}
 	}
 	

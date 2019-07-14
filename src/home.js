@@ -4,7 +4,8 @@ import {styles} from './styles';
 
 class HomeScreen extends Component {
 	static navigationOptions = {
-		drawerLabel: 'Notifications'
+		drawerLabel: 'Notifications',
+		title: 'Home'
 	}
 	
 	state = {
