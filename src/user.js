@@ -14,10 +14,12 @@ class UserScreen extends Component {
 	}
 	
 	render() {
+		const fName = this.props.navigation.getParam('fname');
+		const lName = this.props.navigation.getParam('lname');
 		return (<View style={styles.home}>
-			<Text>
-				user page :)
-			</Text>
+			<Text>user page :)</Text>
+			<Text>{fName}</Text>
+			<Text>{lName}</Text>
 		</View>);
 	};
 };

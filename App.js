@@ -8,9 +8,12 @@ import SettingsScreen from './src/settings';
 
 /*-----------------------*/
 const HomeStack = createStackNavigator({
-	Home: HomeScreen,
-	Users: UserScreen
-});
+		Home: HomeScreen,
+		Users: UserScreen
+	},
+	{
+		initialRouteName: 'Home'
+	});
 const OtherStack = createStackNavigator({
 	Settings: SettingsScreen,
 	Users: UserScreen
