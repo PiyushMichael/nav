@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
-import {View,Text,StyleSheet,Button,TextInput} from 'react-native';
+import {View,Text,StyleSheet,Button,TextInput,Image} from 'react-native';
 import {styles} from './styles';
+import Logo from '../assets/sr.png';
 
 class HomeScreen extends Component {
 	static navigationOptions = {
 		drawerLabel: 'Notifications',
+		drawerIcon: () => (<Image style={{width:40,height:40}} source={Logo} />),
 		title: 'Home'
 	}
+	//this not working because its stacked inside drawer. drawer props only works on drawer
 	
 	state = {
 		name: 'sam',

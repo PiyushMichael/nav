@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
-import {StyleSheet,View,Text} from 'react-native';
+import {StyleSheet,View,Text,Image} from 'react-native';
 import {createStackNavigator,createDrawerNavigator,createBottomTabNavigator,createAppContainer} from 'react-navigation';
 
 import HomeScreen from './src/home';
 import UserScreen from './src/user';
 import SettingsScreen from './src/settings';
+import DrawerComponent from './src/drawer';
 
 /*-----------------------*/
 const HomeStack = createStackNavigator({
@@ -26,7 +27,18 @@ const OtherStack = createStackNavigator({
 	Settings: SettingsScreen,
 	Users: UserScreen
 });
-const AppNavigator = createDrawerNavigator({
+const AppNavigator1 = createDrawerNavigator({
+		Home: HomeStack,
+		Settings: OtherStack
+	},
+	{
+		contentComponent: DrawerComponent,
+		drawerWidth: 200,
+		drawerBackgroundColor: '#f8f899'
+	}
+);
+
+const AppNavigator = createBottomTabNavigator({
 	Home: HomeStack,
 	Settings: OtherStack
 });

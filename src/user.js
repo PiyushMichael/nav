@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {View,Text,StyleSheet,Button} from 'react-native';
 import {styles} from './styles';
+import HeaderBarComponent from './header-bar';
 
 class UserScreen extends Component {
 	static navigationOptions = {
@@ -10,7 +11,8 @@ class UserScreen extends Component {
 		headerTitleStyle:{
 			fontWeight:'bold',
 			color:'red'
-		}
+		},
+		headerTitle: HeaderBarComponent
 	}
 	
 	render() {

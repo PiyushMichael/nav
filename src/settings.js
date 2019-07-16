@@ -10,7 +10,7 @@ class SettingsScreen extends Component {
 		headerTitleStyle:{
 			fontWeight:'bold',
 			color:'blue'
-		}
+		},
 	};
 	
 	state = {
