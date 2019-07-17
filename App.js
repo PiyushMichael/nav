@@ -6,6 +6,7 @@ import HomeScreen from './src/home';
 import UserScreen from './src/user';
 import SettingsScreen from './src/settings';
 import DrawerComponent from './src/drawer';
+import Icon from './assets/sr.png';
 
 /*-----------------------*/
 const HomeStack = createStackNavigator({
@@ -39,9 +40,31 @@ const AppNavigator1 = createDrawerNavigator({
 );
 
 const AppNavigator = createBottomTabNavigator({
-	Home: HomeStack,
-	Settings: OtherStack
-});
+		Home: HomeStack,
+		Settings: OtherStack,
+		Users: UserScreen
+	},
+	{
+		tabBarOptions:{
+			activeBackgroundColor: 'green',
+			activeTintColor: 'white',
+			inactiveBackgroundColor: 'grey',
+			inactiveTintColor: 'black',
+			labelStyle: {
+				fontSize: 20
+			}
+		},
+		defaultNavigationOptions: ({navigation}) => ({
+			tabBarIcon: ({focused,horizontal,tintColor}) => {
+				return <Image source={Icon} style={{width: 40,height:40}} />
+			},
+			tabBarOnPress: ({navigation,defaultHandler}) => {
+				if (navigation.state.key === 'Users') alert('cant navigate to stack component outside of stack');
+				else defaultHandler();
+			}
+		})
+	}
+);
 
 class App extends Component{
 	render(){
